@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__.'/user.php';
+var_dump($check);
 
 class Item{
     public $name;
@@ -15,7 +16,7 @@ class Item{
         $this->img = $_img;
     }
 
-    public function getSconto(){
+    public function getSconto($check){
         if($check == true){
             $this->price = $this->price - ($this->price * 20 / 100);
         }

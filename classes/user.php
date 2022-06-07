@@ -1,8 +1,8 @@
 <?php
-include_once __DIR__.'/type.php';
+include_once '../server.php';
 $check = false;
-var_dump($types);
 
+$errore = '';
 
 class User{
     protected $name;
@@ -17,16 +17,17 @@ class User{
             $this->email = $_email;
             $this->login = true;
         } else{
-            throw new Exception('Is not a mail');
+            // catch (Exception $e) {
+            //     echo 'email non valida'
+            // }
+            $errore = 'mail non valida';
         }
     }
 
     public function getCheck(){
         if($this->login == true){
             $check = true;
-            foreach($types as $key => $value){
-                $value->getSconto();
-            }
+            priceStatus($types, $check);
         };
     }
 }

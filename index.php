@@ -21,12 +21,19 @@ include_once __DIR__.'/classes/user.php';
             <input type="text" name="email">
             <button>ISCRIVITI</button>
         </form>
+        <p><?php echo $errore ?></p>
     </header>
 
     <main>
         <?php foreach($types as $key => $value){ ?>
-            <h4><?php echo $value['nome']; ?></h4>
-            <p><?php echo $value['prezzo']; ?> </p>
+            <div>
+                <img src="<?php echo $value['img'];  ?>" alt="">
+                <h4><?php echo $value['nome']; ?></h4>
+                <p><?php echo $value['prezzo']; ?> </p>
+                <p><?php echo $value['tipo']; ?></p>
+                <p><?php echo $value['animale']; ?></p>
+                <button>Aggiungi al carrello</button>
+            </div>
         <?php } ?>
     </main>
     

@@ -11,32 +11,4 @@ class Type extends Item{
         $this->animale = $_animale;
         
     }
-};
-
-$types = [
-    [
-        'nome' => 'Osso di gomma',
-        'prezzo' => 20.99,
-        'stock' => 50,
-        'img' => 'https://www.ilpelosauro.it/Repository/ossa%20gomma%20dura.jpg',
-        'tipo' => 'giocattolo',
-        'animale' => 'cane'
-    ],
-    [
-        'nome' => 'Osso di gomma',
-        'prezzo' => 20.99,
-        'stock' => 50,
-        'img' => 'https://www.ilpelosauro.it/Repository/ossa%20gomma%20dura.jpg',
-        'tipo' => 'giocattolo',
-        'animale' => 'cane'
-    ],
-];
-
-function priceStatus(){
-    foreach($types as $key => $value){
-        $item = new Type($value['nome'], $value['prezzo'], $value['stock'], $value['img'], $value['tipo'], $value['animale']);
-        $item->getSconto();
-    }
 }
-
-priceStatus();
