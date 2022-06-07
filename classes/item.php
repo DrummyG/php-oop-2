@@ -14,4 +14,11 @@ class Item{
         $this->stock = $_stock;
         $this->img = $_img;
     }
+
+    public function getSconto(){
+        if($check == true){
+            $this->price = $this->price - ($this->price * 20 / 100);
+        }
+        echo 'a';
+    }
 }

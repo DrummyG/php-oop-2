@@ -32,10 +32,11 @@ $types = [
     ],
 ];
 
-$number = 0;
-
-foreach($types as $key => $value){
-    $numer = $number + 1;
-    $item = new Type($value['nome'], $value['prezzo'], $value['stock'], $value['img'], $value['tipo'], $value['animale']);
-    var_dump($item);
+function priceStatus(){
+    foreach($types as $key => $value){
+        $item = new Type($value['nome'], $value['prezzo'], $value['stock'], $value['img'], $value['tipo'], $value['animale']);
+        $item->getSconto();
+    }
 }
+
+priceStatus();

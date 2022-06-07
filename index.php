@@ -10,17 +10,24 @@ include_once __DIR__.'/classes/user.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sei un cane</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <header>
-
+        <h3>Non sei iscritto? Fallo adesso per ottenere il 20% di sconto sui nostri prodotti!</h3>
+        <form action="" method="post">
+            <input type="text" name="nome">
+            <input type="text" name="cognome">
+            <input type="text" name="email">
+            <button>ISCRIVITI</button>
+        </form>
     </header>
 
     <main>
         <?php foreach($types as $key => $value){ ?>
             <h4><?php echo $value['nome']; ?></h4>
             <p><?php echo $value['prezzo']; ?> </p>
-        <?php}?>
+        <?php } ?>
     </main>
     
 </body>
